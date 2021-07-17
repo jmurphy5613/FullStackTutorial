@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { Posts } = require("../models")
 
-router.post("/", async (req, res) => {
+router.post("/createpost", async (req, res) => {
     const post = req.body;
     await Posts.create(post);
 })
